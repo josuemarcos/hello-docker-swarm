@@ -1,0 +1,28 @@
+version: "3.8"
+
+services:
+  app:
+    build: ./app
+    image: hello-swarm-app
+    networks:
+      - app_net
+    deploy:
+      replicas: 3
+      restart_policy:
+        condition: on-failure
+
+  nginx:
+    build: ./nginx
+    image: hello-swarm-nginx
+    ports:
+      - "8080:80"
+    depends_on:
+      - app
+    networks:
+      - app_net
+    deploy:
+      replicas: 1
+
+networks:
+  app_net:
+    driver: overlay
