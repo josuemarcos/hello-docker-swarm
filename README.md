@@ -68,6 +68,7 @@ Isso permite visualizar claramente o **balanceamento de carga**.
 
 ## 📁 Estrutura do projeto
 
+```text
 .
 ├── app
 │ ├── app.rb
@@ -81,7 +82,7 @@ Isso permite visualizar claramente o **balanceamento de carga**.
 ├── docker-compose.yml
 └── README.md
 
-yaml
+```
 
 ---
 
