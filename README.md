@@ -96,37 +96,47 @@ Para inicializar o Swarm localmente:
 
 ```bash
 docker swarm init
+```
 
 ## ▶️ Como executar o projeto
 
-### 1️⃣ Build das imagens
+###  Build das imagens
 
 ```bash
 docker compose build
-2️⃣ Deploy no Docker Swarm
-bash
-Copiar código
+```
+
+###  Deploy no Docker Swarm
+```bash
 docker stack deploy -c docker-compose.yml hello
-3️⃣ Verificar serviços
-bash
-Copiar código
+```
+
+###  Verificar serviços
+```bash
 docker service ls
-Saída esperada:
-text
-Copiar código
+```
+
+### Saída esperada:
+```bash
 hello_app     replicated   3/3
 hello_nginx   replicated   1/1
-🌐 Acessando a aplicação
-Abra no navegador ou use curl:
+```
 
-text
-Copiar código
+### 🌐 Acessando a aplicação
+Abra no navegador ou use curl:
+```bash
 http://localhost:8080
-Exemplo de resposta:
-text
-Copiar código
+```
+
+### Exemplo de resposta:
+```bash
 Olá Mundo!
 Hostname: hello_app.2.k8g9nryihx9g
 IP: 10.0.1.12
 Timestamp: 2026-01-13 20:15:42 +0000
-Ao atualizar a página várias vezes, você verá hostnames diferentes, comprovando o balanceamento de carga.
+```
+
+### Ao atualizar a página várias vezes, você verá hostnames diferentes, comprovando o balanceamento de carga.
+
+
+
