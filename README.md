@@ -36,7 +36,7 @@ Docker Swarm (Routing Mesh)
 3x Containers Ruby (Sinatra)
 
 yaml
-Copiar código
+
 
 - O cliente acessa apenas o **Nginx**
 - O Nginx distribui as requisições entre múltiplas réplicas da aplicação
@@ -82,7 +82,6 @@ Isso permite visualizar claramente o **balanceamento de carga**.
 └── README.md
 
 yaml
-Copiar código
 
 ---
 
